@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Flying Tesla</title>
+
+    <!-- CSS FILE -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <!-- =================================================
+         MAIN SCENE
+    ================================================== -->
+
+    <div class="scene">
+
+        <!-- SKY -->
+        <div class="sky">
+
+            <!-- Stars -->
+            <div class="stars">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <!-- Moon -->
+            <div class="moon"></div>
+
+        </div>
+
+
+        <!-- =================================================
+             CITY
+        ================================================== -->
+
+        <div class="city">
+
+            <div class="building building1">
+                <i></i><i></i><i></i>
+                <i></i><i></i><i></i>
+                <i></i><i></i><i></i>
+            </div>
+
+            <div class="building building2">
+                <i></i><i></i><i></i>
+                <i></i><i></i><i></i>
+                <i></i><i></i><i></i>
+                <i></i><i></i><i></i>
+            </div>
+
+            <div class="building building3">
+                <i></i><i></i><i></i>
+                <i></i><i></i><i></i>
+                <i></i><i></i>
+            </div>
+
+            <div class="building building4">
+                <i></i><i></i><i></i>
+                <i></i><i></i><i></i>
+                <i></i><i></i><i></i>
+                <i></i>
+            </div>
+
+            <div class="building building5">
+                <i></i><i></i><i></i>
+                <i></i><i></i><i></i>
+                <i></i><i></i>
+            </div>
+
+            <div class="building building6">
+                <i></i><i></i><i></i>
+                <i></i><i></i><i></i>
+                <i></i><i></i><i></i>
+                <i></i><i></i>
+            </div>
+
+            <div class="building building7">
+                <i></i><i></i><i></i>
+                <i></i><i></i><i></i>
+                <i></i><i></i>
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             GROUND
+        ================================================== -->
+
+        <div class="ground">
+
+            <div class="road-light light1"></div>
+            <div class="road-light light2"></div>
+            <div class="road-light light3"></div>
+            <div class="road-light light4"></div>
+            <div class="road-light light5"></div>
+
+        </div>
+
+
+        <!-- =================================================
+             SMOKE
+        ================================================== -->
+
+        <div class="smoke-container">
+
+            <div class="smoke smoke1"></div>
+            <div class="smoke smoke2"></div>
+            <div class="smoke smoke3"></div>
+            <div class="smoke smoke4"></div>
+            <div class="smoke smoke5"></div>
+            <div class="smoke smoke6"></div>
+            <div class="smoke smoke7"></div>
+            <div class="smoke smoke8"></div>
+
+        </div>
+
+
+        <!-- =================================================
+             FLYING CAR
+        ================================================== -->
+
+        <div class="car-wrapper" id="car">
+
+
+            <!-- SPEED TRAILS -->
+
+            <div class="speed-trail trail1"></div>
+            <div class="speed-trail trail2"></div>
+            <div class="speed-trail trail3"></div>
+
+
+            <!-- THRUSTER GLOW -->
+
+            <div class="thruster-glow glow1"></div>
+            <div class="thruster-glow glow2"></div>
+            <div class="thruster-glow glow3"></div>
+            <div class="thruster-glow glow4"></div>
+
+
+            <!-- THRUSTERS -->
+
+            <div class="thruster thruster1"></div>
+            <div class="thruster thruster2"></div>
+            <div class="thruster thruster3"></div>
+            <div class="thruster thruster4"></div>
+
+
+            <!-- =================================================
+                 CAR
+            ================================================== -->
+
+            <div class="car">
+
+
+                <!-- MAIN CAR BODY -->
+
+                <div class="car-body">
+
+                    <!-- Front nose -->
+                    <div class="front-nose"></div>
+
+                    <!-- Front bumper -->
+                    <div class="front-bumper"></div>
+
+                    <!-- Headlights -->
+                    <div class="headlight headlight-left"></div>
+                    <div class="headlight headlight-right"></div>
+
+                    <!-- Lower black grille -->
+                    <div class="lower-grille"></div>
+
+                    <!-- Side body line -->
+                    <div class="body-line"></div>
+
+                    <!-- Rear light -->
+                    <div class="rear-light"></div>
+
+                    <!-- Doors -->
+                    <div class="door door-left"></div>
+                    <div class="door door-right"></div>
+
+                    <!-- Door handles -->
+                    <div class="handle handle-left"></div>
+                    <div class="handle handle-right"></div>
+
+                    <!-- Mirrors -->
+                    <div class="mirror mirror-left"></div>
+                    <div class="mirror mirror-right"></div>
+
+                </div>
+
+
+                <!-- =================================================
+                     GLASS CABIN
+                ================================================== -->
+
+                <div class="cabin">
+
+                    <div class="front-glass"></div>
+
+                    <div class="side-glass glass-left"></div>
+
+                    <div class="side-glass glass-right"></div>
+
+                    <div class="roof-glass"></div>
+
+                </div>
+
+
+                <!-- =================================================
+                     WHEELS
+                ================================================== -->
+
+                <div class="wheel wheel-left">
+
+                    <div class="rim">
+
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+
+                    </div>
+
+                    <div class="wheel-center"></div>
+
+                </div>
+
+
+                <div class="wheel wheel-right">
+
+                    <div class="rim">
+
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+
+                    </div>
+
+                    <div class="wheel-center"></div>
+
+                </div>
+
+
+                <!-- BODY REFLECTION -->
+
+                <div class="car-reflection"></div>
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             UI
+        ================================================== -->
+
+        <div class="ui">
+
+
+            <!-- BRAND -->
+
+            <div class="brand">
+
+                <div class="logo">
+                    T
+                </div>
+
+                <div class="brand-text">
+
+                    <h1>TESLA</h1>
+
+                    <p>FLIGHT SYSTEM</p>
+
+                </div>
+
+            </div>
+
+
+            <!-- STATUS -->
+
+            <div class="status-box">
+
+                <div class="status-light"></div>
+
+                <div>
+
+                    <small>SYSTEM STATUS</small>
+
+                    <strong id="status">
+                        READY
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <!-- BUTTONS -->
+
+            <div class="buttons">
+
+                <button id="takeoff">
+                    ▲ TAKE OFF
+                </button>
+
+                <button id="land">
+                    ▼ LAND
+                </button>
+
+                <button id="boost">
+                    ⚡ BOOST
+                </button>
+
+            </div>
+
+
+        </div>
+
+
+        <!-- =================================================
+             SPEED
+        ================================================== -->
+
+        <div class="speed-box">
+
+            <p>FLIGHT SPEED</p>
+
+            <div class="speed-number">
+
+                <span id="speed">
+                    000
+                </span>
+
+                <small>
+                    KM/H
+                </small>
+
+            </div>
+
+            <div class="speed-track">
+
+                <div id="speedBar"></div>
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             TITLE
+        ================================================== -->
+
+        <div class="title">
+
+            <p>
+                THE FUTURE IS ELECTRIC
+            </p>
+
+            <h2>
+                DRIVE <span>BEYOND</span>
+            </h2>
+
+        </div>
+
+    </div>
+
+
+    <!-- JAVASCRIPT FILE -->
+    <script src="./script.js"></script>
+
+</body>
+</html>

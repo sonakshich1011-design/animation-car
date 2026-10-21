@@ -1,0 +1,2105 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background: #020306;
+}
+
+
+/* =====================================================
+   MAIN SCENE
+===================================================== */
+
+.scene {
+
+    position: relative;
+
+    width: 100vw;
+    height: 100vh;
+
+    overflow: hidden;
+
+    background:
+
+        radial-gradient(
+            ellipse at 50% 40%,
+            #26303b 0%,
+            #111820 32%,
+            #070a0f 65%,
+            #010203 100%
+        );
+}
+
+
+/* =====================================================
+   SKY
+===================================================== */
+
+.sky {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+
+        radial-gradient(
+            ellipse at 50% 30%,
+            rgba(120,150,180,0.16),
+            transparent 45%
+        );
+}
+
+
+/* =====================================================
+   MOON
+===================================================== */
+
+.moon {
+
+    position: absolute;
+
+    right: 12%;
+    top: 9%;
+
+    width: 85px;
+    height: 85px;
+
+    border-radius: 50%;
+
+    background:
+
+        radial-gradient(
+            circle at 35% 30%,
+            #ffffff,
+            #d8dee6 55%,
+            #8993a0
+        );
+
+    box-shadow:
+
+        0 0 25px rgba(255,255,255,0.35),
+
+        0 0 80px rgba(255,255,255,0.12);
+}
+
+
+/* =====================================================
+   STARS
+===================================================== */
+
+.stars span {
+
+    position: absolute;
+
+    width: 2px;
+    height: 2px;
+
+    border-radius: 50%;
+
+    background: white;
+
+    box-shadow:
+        0 0 7px white;
+
+    animation:
+        twinkle 2s infinite alternate;
+}
+
+.stars span:nth-child(1) {
+    left: 5%;
+    top: 10%;
+}
+
+.stars span:nth-child(2) {
+    left: 12%;
+    top: 25%;
+}
+
+.stars span:nth-child(3) {
+    left: 20%;
+    top: 8%;
+}
+
+.stars span:nth-child(4) {
+    left: 28%;
+    top: 18%;
+}
+
+.stars span:nth-child(5) {
+    left: 35%;
+    top: 9%;
+}
+
+.stars span:nth-child(6) {
+    left: 44%;
+    top: 25%;
+}
+
+.stars span:nth-child(7) {
+    left: 53%;
+    top: 10%;
+}
+
+.stars span:nth-child(8) {
+    left: 61%;
+    top: 20%;
+}
+
+.stars span:nth-child(9) {
+    left: 70%;
+    top: 8%;
+}
+
+.stars span:nth-child(10) {
+    left: 78%;
+    top: 25%;
+}
+
+.stars span:nth-child(11) {
+    left: 88%;
+    top: 12%;
+}
+
+.stars span:nth-child(12) {
+    left: 95%;
+    top: 30%;
+}
+
+.stars span:nth-child(13) {
+    left: 32%;
+    top: 32%;
+}
+
+.stars span:nth-child(14) {
+    left: 57%;
+    top: 35%;
+}
+
+.stars span:nth-child(15) {
+    left: 83%;
+    top: 38%;
+}
+
+
+@keyframes twinkle {
+
+    from {
+        opacity: 0.2;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* =====================================================
+   CITY
+===================================================== */
+
+.city {
+
+    position: absolute;
+
+    left: 0;
+    bottom: 14%;
+
+    width: 100%;
+    height: 28%;
+
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: space-around;
+
+    opacity: 0.8;
+}
+
+
+.building {
+
+    position: relative;
+
+    width: 8%;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            #080b10,
+            #202833,
+            #080b10
+        );
+
+    border-top:
+        1px solid #3b4653;
+}
+
+
+/* Building heights */
+
+.building1 {
+    height: 45%;
+}
+
+.building2 {
+    height: 75%;
+}
+
+.building3 {
+    height: 58%;
+}
+
+.building4 {
+    height: 90%;
+}
+
+.building5 {
+    height: 52%;
+}
+
+.building6 {
+    height: 80%;
+}
+
+.building7 {
+    height: 62%;
+}
+
+
+/* Building windows */
+
+.building i {
+
+    display: block;
+
+    width: 5px;
+    height: 8px;
+
+    background: #eab308;
+
+    box-shadow:
+        0 0 8px rgba(234,179,8,0.7);
+
+    animation:
+        windowBlink 3s infinite alternate;
+}
+
+
+.building {
+
+    padding: 15px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 10px;
+}
+
+
+@keyframes windowBlink {
+
+    from {
+        opacity: 0.15;
+    }
+
+    to {
+        opacity: 0.9;
+    }
+}
+
+
+/* =====================================================
+   GROUND
+===================================================== */
+
+.ground {
+
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 17%;
+
+    background:
+
+        linear-gradient(
+            to bottom,
+            #161b21,
+            #030405
+        );
+
+    border-top:
+        1px solid #3c444e;
+}
+
+
+.ground::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 35%;
+
+    width: 100%;
+    height: 1px;
+
+    background:
+        rgba(255,255,255,0.12);
+
+    box-shadow:
+        0 20px 40px rgba(255,255,255,0.05);
+}
+
+
+/* =====================================================
+   GROUND LIGHTS
+===================================================== */
+
+.road-light {
+
+    position: absolute;
+
+    width: 5px;
+    height: 5px;
+
+    border-radius: 50%;
+
+    background: white;
+
+    box-shadow:
+        0 0 10px white,
+        0 0 25px white;
+}
+
+
+.light1 {
+    left: 12%;
+    top: 40%;
+}
+
+.light2 {
+    left: 30%;
+    top: 55%;
+}
+
+.light3 {
+    left: 50%;
+    top: 42%;
+}
+
+.light4 {
+    left: 72%;
+    top: 58%;
+}
+
+.light5 {
+    left: 90%;
+    top: 38%;
+}
+
+
+/* =====================================================
+   CAR WRAPPER
+===================================================== */
+
+.car-wrapper {
+
+    position: absolute;
+
+    left: 50%;
+    top: 51%;
+
+    width: 700px;
+    height: 400px;
+
+    transform:
+        translate(-50%, -50%);
+
+    z-index: 30;
+
+    transition:
+        top 1.8s cubic-bezier(0.2,0.8,0.2,1);
+}
+
+
+/* =====================================================
+   CAR
+===================================================== */
+
+.car {
+
+    position: absolute;
+
+    left: 50%;
+    top: 70px;
+
+    width: 650px;
+    height: 260px;
+
+    transform:
+        translateX(-50%);
+
+    animation:
+        hoverCar 3s ease-in-out infinite;
+}
+
+
+@keyframes hoverCar {
+
+    0% {
+
+        transform:
+            translateX(-50%)
+            translateY(0);
+    }
+
+    50% {
+
+        transform:
+            translateX(-50%)
+            translateY(-8px);
+    }
+
+    100% {
+
+        transform:
+            translateX(-50%)
+            translateY(0);
+    }
+}
+
+
+/* =====================================================
+   CAR BODY
+===================================================== */
+
+.car-body {
+
+    position: absolute;
+
+    left: 70px;
+    top: 105px;
+
+    width: 520px;
+    height: 105px;
+
+    border-radius:
+        55px 110px 35px 35px;
+
+    background:
+
+        linear-gradient(
+            150deg,
+            #ffffff 0%,
+            #e6e9ed 18%,
+            #aab1ba 45%,
+            #68717c 72%,
+            #20252c 100%
+        );
+
+    border:
+        1px solid #dce2e8;
+
+    box-shadow:
+
+        inset 0 4px 10px
+        rgba(255,255,255,0.9),
+
+        inset 0 -18px 25px
+        rgba(0,0,0,0.45),
+
+        0 25px 50px
+        rgba(0,0,0,0.75);
+}
+
+
+/* =====================================================
+   LOWER BODY
+===================================================== */
+
+.car-body::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 35px;
+
+    border-radius:
+        0 0 30px 30px;
+
+    background:
+
+        linear-gradient(
+            to bottom,
+            #242a31,
+            #030405
+        );
+}
+
+
+/* =====================================================
+   FRONT NOSE
+===================================================== */
+
+.front-nose {
+
+    position: absolute;
+
+    left: -3px;
+    top: 39px;
+
+    width: 125px;
+    height: 55px;
+
+    background:
+
+        linear-gradient(
+            to bottom,
+            #242a31,
+            #020304
+        );
+
+    clip-path:
+        polygon(
+            0 45%,
+            100% 0,
+            100% 100%,
+            0 75%
+        );
+}
+
+
+/* =====================================================
+   FRONT BUMPER
+===================================================== */
+
+.front-bumper {
+
+    position: absolute;
+
+    left: 0;
+    bottom: 20px;
+
+    width: 100px;
+    height: 8px;
+
+    border-radius: 0 10px 10px 0;
+
+    background: #11161c;
+}
+
+
+/* =====================================================
+   HEADLIGHTS
+===================================================== */
+
+.headlight {
+
+    position: absolute;
+
+    top: 47px;
+
+    width: 80px;
+    height: 5px;
+
+    border-radius: 50%;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            white,
+            #dbeafe,
+            transparent
+        );
+
+    box-shadow:
+
+        0 0 8px white,
+
+        0 0 25px
+        rgba(147,197,253,0.8);
+}
+
+
+.headlight-left {
+    left: 5px;
+}
+
+
+.headlight-right {
+    left: 85px;
+}
+
+
+/* =====================================================
+   LOWER GRILLE
+===================================================== */
+
+.lower-grille {
+
+    position: absolute;
+
+    left: 5px;
+    bottom: 15px;
+
+    width: 110px;
+    height: 12px;
+
+    border-radius: 5px;
+
+    background: #020304;
+
+    box-shadow:
+        inset 0 0 5px #000;
+}
+
+
+/* =====================================================
+   BODY LINE
+===================================================== */
+
+.body-line {
+
+    position: absolute;
+
+    left: 110px;
+    top: 72px;
+
+    width: 390px;
+    height: 1px;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,0.45),
+            rgba(255,255,255,0.05),
+            transparent
+        );
+}
+
+
+/* =====================================================
+   REAR LIGHT
+===================================================== */
+
+.rear-light {
+
+    position: absolute;
+
+    right: 0;
+    top: 45px;
+
+    width: 10px;
+    height: 30px;
+
+    border-radius:
+        0 8px 8px 0;
+
+    background: #ef2020;
+
+    box-shadow:
+
+        0 0 10px #ef2020,
+
+        0 0 25px
+        rgba(255,0,0,0.6);
+}
+
+
+/* =====================================================
+   CABIN
+===================================================== */
+
+.cabin {
+
+    position: absolute;
+
+    left: 170px;
+    top: 28px;
+
+    width: 355px;
+    height: 105px;
+
+    transform: skewX(-8deg);
+
+    border-radius:
+        180px 190px 15px 15px;
+
+    background:
+
+        linear-gradient(
+            140deg,
+            rgba(190,205,220,0.5),
+            #17202b 20%,
+            #05090e 70%,
+            #647180 100%
+        );
+
+    border:
+        2px solid #d8dde3;
+
+    box-shadow:
+
+        inset 0 3px 10px
+        rgba(255,255,255,0.5);
+}
+
+
+/* =====================================================
+   FRONT GLASS
+===================================================== */
+
+.front-glass {
+
+    position: absolute;
+
+    left: 15px;
+    top: 13px;
+
+    width: 135px;
+    height: 73px;
+
+    background:
+
+        linear-gradient(
+            145deg,
+            #56677a,
+            #0c131c 55%,
+            #020407
+        );
+
+    clip-path:
+        polygon(
+            0 100%,
+            27% 0,
+            100% 0,
+            77% 100%
+        );
+
+    border-right:
+        1px solid #8793a0;
+}
+
+
+/* =====================================================
+   SIDE GLASS
+===================================================== */
+
+.side-glass {
+
+    position: absolute;
+
+    top: 14px;
+
+    height: 70px;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #3d4d5e,
+            #080e15 55%,
+            #020306
+        );
+
+    border-bottom:
+        1px solid #687585;
+}
+
+
+.glass-left {
+
+    left: 150px;
+
+    width: 95px;
+
+    clip-path:
+        polygon(
+            8% 0,
+            100% 0,
+            82% 100%,
+            0 100%
+        );
+}
+
+
+.glass-right {
+
+    left: 250px;
+
+    width: 78px;
+
+    clip-path:
+        polygon(
+            5% 0,
+            90% 0,
+            100% 65%,
+            65% 100%,
+            0 100%
+        );
+}
+
+
+/* =====================================================
+   ROOF GLASS
+===================================================== */
+
+.roof-glass {
+
+    position: absolute;
+
+    left: 80px;
+    top: 1px;
+
+    width: 220px;
+    height: 15px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(180,210,235,0.35);
+
+    filter: blur(1px);
+}
+
+
+/* =====================================================
+   DOORS
+===================================================== */
+
+.door {
+
+    position: absolute;
+
+    top: 18px;
+
+    height: 70px;
+
+    border-left:
+        1px solid rgba(20,25,30,0.7);
+
+    border-right:
+        1px solid rgba(255,255,255,0.12);
+}
+
+
+.door-left {
+
+    left: 175px;
+    width: 105px;
+}
+
+
+.door-right {
+
+    left: 285px;
+    width: 105px;
+}
+
+
+/* =====================================================
+   HANDLES
+===================================================== */
+
+.handle {
+
+    position: absolute;
+
+    top: 43px;
+
+    width: 34px;
+    height: 3px;
+
+    border-radius: 5px;
+
+    background: #4b5563;
+}
+
+
+.handle-left {
+    left: 225px;
+}
+
+
+.handle-right {
+    left: 340px;
+}
+
+
+/* =====================================================
+   MIRRORS
+===================================================== */
+
+.mirror {
+
+    position: absolute;
+
+    width: 22px;
+    height: 13px;
+
+    border-radius: 50%;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #c4ccd5,
+            #10161d
+        );
+
+    box-shadow:
+        0 2px 5px black;
+}
+
+
+.mirror-left {
+
+    left: 158px;
+    top: 88px;
+}
+
+
+.mirror-right {
+
+    right: 70px;
+    top: 85px;
+}
+
+
+/* =====================================================
+   WHEELS
+===================================================== */
+
+.wheel {
+
+    position: absolute;
+
+    top: 158px;
+
+    width: 82px;
+    height: 82px;
+
+    border-radius: 50%;
+
+    background:
+
+        radial-gradient(
+            circle,
+            #12171c 0 30%,
+            #020304 32% 57%,
+            #69727c 59% 63%,
+            #080a0d 65% 100%
+        );
+
+    border:
+        3px solid #14191f;
+
+    box-shadow:
+
+        inset 0 0 10px black,
+
+        0 8px 18px
+        rgba(0,0,0,0.8);
+}
+
+
+.wheel-left {
+    left: 105px;
+}
+
+
+.wheel-right {
+    right: 80px;
+}
+
+
+/* =====================================================
+   RIMS
+===================================================== */
+
+.rim {
+
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    width: 56px;
+    height: 56px;
+
+    transform:
+        translate(-50%, -50%);
+
+    border:
+        3px solid #aeb7c1;
+
+    border-radius: 50%;
+
+    animation:
+        rotateWheel 1.5s linear infinite;
+}
+
+
+.rim span {
+
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    width: 3px;
+    height: 25px;
+
+    transform-origin:
+        center bottom;
+
+    background:
+
+        linear-gradient(
+            to bottom,
+            #e2e8f0,
+            #4b5563
+        );
+}
+
+
+.rim span:nth-child(1) {
+    transform:
+        translate(-50%, -100%)
+        rotate(0deg);
+}
+
+.rim span:nth-child(2) {
+    transform:
+        translate(-50%, -100%)
+        rotate(72deg);
+}
+
+.rim span:nth-child(3) {
+    transform:
+        translate(-50%, -100%)
+        rotate(144deg);
+}
+
+.rim span:nth-child(4) {
+    transform:
+        translate(-50%, -100%)
+        rotate(216deg);
+}
+
+.rim span:nth-child(5) {
+    transform:
+        translate(-50%, -100%)
+        rotate(288deg);
+}
+
+
+@keyframes rotateWheel {
+
+    from {
+        transform:
+            translate(-50%, -50%)
+            rotate(0deg);
+    }
+
+    to {
+        transform:
+            translate(-50%, -50%)
+            rotate(360deg);
+    }
+}
+
+
+/* =====================================================
+   WHEEL CENTER
+===================================================== */
+
+.wheel-center {
+
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    width: 12px;
+    height: 12px;
+
+    transform:
+        translate(-50%, -50%);
+
+    border-radius: 50%;
+
+    background: #dce2e8;
+
+    box-shadow:
+        0 0 5px white;
+}
+
+
+/* =====================================================
+   REFLECTION
+===================================================== */
+
+.car-reflection {
+
+    position: absolute;
+
+    left: 115px;
+    top: 110px;
+
+    width: 390px;
+    height: 4px;
+
+    border-radius: 50%;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255,255,255,0.8),
+            transparent
+        );
+
+    filter: blur(2px);
+
+    opacity: 0.6;
+}
+
+
+/* =====================================================
+   THRUSTERS
+===================================================== */
+
+.thruster {
+
+    position: absolute;
+
+    top: 245px;
+
+    width: 30px;
+    height: 100px;
+
+    z-index: -2;
+
+    clip-path:
+        polygon(
+            20% 0,
+            80% 0,
+            100% 40%,
+            50% 100%,
+            0 40%
+        );
+
+    background:
+
+        linear-gradient(
+            to bottom,
+            #ffffff 0%,
+            #67e8f9 15%,
+            #38bdf8 40%,
+            #2563eb 65%,
+            transparent 100%
+        );
+
+    filter:
+        blur(3px);
+
+    animation:
+        flame 0.18s infinite alternate;
+}
+
+
+.thruster1 {
+    left: 145px;
+}
+
+.thruster2 {
+    left: 225px;
+}
+
+.thruster3 {
+    right: 200px;
+}
+
+.thruster4 {
+    right: 120px;
+}
+
+
+@keyframes flame {
+
+    from {
+
+        transform:
+            scaleY(0.55)
+            scaleX(0.75);
+
+        opacity: 0.6;
+    }
+
+    to {
+
+        transform:
+            scaleY(1.15)
+            scaleX(1.1);
+
+        opacity: 1;
+    }
+}
+
+
+/* =====================================================
+   THRUSTER GLOW
+===================================================== */
+
+.thruster-glow {
+
+    position: absolute;
+
+    top: 260px;
+
+    width: 70px;
+    height: 70px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(14,165,233,0.3);
+
+    filter:
+        blur(20px);
+
+    z-index: -3;
+
+    animation:
+        glowPulse 0.2s infinite alternate;
+}
+
+
+.glow1 {
+    left: 125px;
+}
+
+.glow2 {
+    left: 205px;
+}
+
+.glow3 {
+    right: 180px;
+}
+
+.glow4 {
+    right: 100px;
+}
+
+
+@keyframes glowPulse {
+
+    from {
+
+        transform: scale(0.7);
+
+        opacity: 0.4;
+    }
+
+    to {
+
+        transform: scale(1.3);
+
+        opacity: 1;
+    }
+}
+
+
+/* =====================================================
+   SMOKE
+===================================================== */
+
+.smoke-container {
+
+    position: absolute;
+
+    left: 50%;
+    bottom: 10%;
+
+    width: 650px;
+    height: 180px;
+
+    transform:
+        translateX(-50%);
+
+    z-index: 15;
+
+    pointer-events: none;
+}
+
+
+.smoke {
+
+    position: absolute;
+
+    border-radius: 50%;
+
+    background:
+
+        radial-gradient(
+            circle,
+            rgba(220,225,230,0.45),
+            rgba(110,120,130,0.2),
+            transparent 70%
+        );
+
+    filter: blur(10px);
+
+    animation:
+        smokeRise 4s infinite ease-out;
+}
+
+
+.smoke1 {
+    left: 30px;
+    bottom: 0;
+    width: 180px;
+    height: 110px;
+}
+
+.smoke2 {
+    left: 120px;
+    bottom: 10px;
+    width: 150px;
+    height: 100px;
+    animation-delay: 0.5s;
+}
+
+.smoke3 {
+    left: 210px;
+    bottom: -10px;
+    width: 200px;
+    height: 130px;
+    animation-delay: 1s;
+}
+
+.smoke4 {
+    left: 310px;
+    bottom: 0;
+    width: 150px;
+    height: 110px;
+    animation-delay: 1.5s;
+}
+
+.smoke5 {
+    left: 400px;
+    bottom: 10px;
+    width: 170px;
+    height: 100px;
+    animation-delay: 2s;
+}
+
+.smoke6 {
+    left: 80px;
+    bottom: 20px;
+    width: 130px;
+    height: 90px;
+    animation-delay: 2.4s;
+}
+
+.smoke7 {
+    left: 280px;
+    bottom: 20px;
+    width: 180px;
+    height: 100px;
+    animation-delay: 2.8s;
+}
+
+.smoke8 {
+    left: 450px;
+    bottom: 15px;
+    width: 120px;
+    height: 90px;
+    animation-delay: 3.2s;
+}
+
+
+@keyframes smokeRise {
+
+    0% {
+
+        transform:
+            translateY(30px)
+            scale(0.5);
+
+        opacity: 0.05;
+    }
+
+    30% {
+        opacity: 0.4;
+    }
+
+    100% {
+
+        transform:
+            translateY(-130px)
+            scale(1.6);
+
+        opacity: 0;
+    }
+}
+
+
+/* =====================================================
+   SPEED TRAILS
+===================================================== */
+
+.speed-trail {
+
+    position: absolute;
+
+    left: -150px;
+
+    width: 150px;
+    height: 3px;
+
+    border-radius: 50%;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            transparent,
+            #38bdf8,
+            white
+        );
+
+    opacity: 0;
+}
+
+
+.trail1 {
+    top: 135px;
+}
+
+.trail2 {
+    top: 165px;
+}
+
+.trail3 {
+    top: 195px;
+}
+
+
+/* =====================================================
+   UI
+===================================================== */
+
+.ui {
+
+    position: absolute;
+
+    left: 40px;
+    top: 35px;
+
+    z-index: 100;
+}
+
+
+.brand {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+
+.logo {
+
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border:
+        1px solid rgba(255,255,255,0.5);
+
+    border-radius: 50%;
+
+    color: white;
+
+    font-size: 21px;
+    font-weight: bold;
+}
+
+
+.brand-text h1 {
+
+    color: white;
+
+    font-size: 20px;
+
+    letter-spacing: 5px;
+}
+
+
+.brand-text p {
+
+    margin-top: 3px;
+
+    color: #77818d;
+
+    font-size: 8px;
+
+    letter-spacing: 3px;
+}
+
+
+/* =====================================================
+   STATUS
+===================================================== */
+
+.status-box {
+
+    margin-top: 22px;
+
+    width: 190px;
+
+    padding: 12px;
+
+    display: flex;
+
+    gap: 10px;
+
+    align-items: center;
+
+    background:
+        rgba(5,9,14,0.7);
+
+    border:
+        1px solid rgba(255,255,255,0.12);
+
+    backdrop-filter:
+        blur(10px);
+}
+
+
+.status-light {
+
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: #22c55e;
+
+    box-shadow:
+        0 0 12px #22c55e;
+
+    animation:
+        statusPulse 1s infinite alternate;
+}
+
+
+.status-box small {
+
+    display: block;
+
+    color: #687380;
+
+    font-size: 7px;
+
+    letter-spacing: 2px;
+}
+
+
+.status-box strong {
+
+    display: block;
+
+    margin-top: 4px;
+
+    color: white;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+}
+
+
+@keyframes statusPulse {
+
+    to {
+        opacity: 0.35;
+    }
+}
+
+
+/* =====================================================
+   BUTTONS
+===================================================== */
+
+.buttons {
+
+    margin-top: 14px;
+
+    display: flex;
+
+    gap: 7px;
+}
+
+
+button {
+
+    padding: 10px 13px;
+
+    border:
+        1px solid rgba(255,255,255,0.18);
+
+    background:
+        rgba(5,9,14,0.85);
+
+    color: white;
+
+    cursor: pointer;
+
+    font-size: 9px;
+
+    letter-spacing: 1px;
+
+    transition:
+        0.25s;
+
+    backdrop-filter:
+        blur(10px);
+}
+
+
+button:hover {
+
+    background: white;
+
+    color: black;
+
+    transform:
+        translateY(-2px);
+}
+
+
+button:active {
+
+    transform:
+        scale(0.95);
+}
+
+
+/* =====================================================
+   SPEED BOX
+===================================================== */
+
+.speed-box {
+
+    position: absolute;
+
+    right: 40px;
+    top: 40px;
+
+    z-index: 100;
+
+    width: 210px;
+
+    padding: 18px;
+
+    background:
+        rgba(5,9,14,0.7);
+
+    border:
+        1px solid rgba(255,255,255,0.13);
+
+    backdrop-filter:
+        blur(10px);
+}
+
+
+.speed-box p {
+
+    color: #737e8a;
+
+    font-size: 8px;
+
+    letter-spacing: 3px;
+}
+
+
+.speed-number {
+
+    margin-top: 5px;
+
+    color: white;
+
+    font-size: 38px;
+
+    font-weight: 300;
+}
+
+
+.speed-number small {
+
+    color: #66717d;
+
+    font-size: 9px;
+
+    letter-spacing: 1px;
+}
+
+
+.speed-track {
+
+    width: 100%;
+    height: 3px;
+
+    margin-top: 10px;
+
+    background: #252b32;
+}
+
+
+#speedBar {
+
+    width: 0%;
+    height: 100%;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            #38bdf8,
+            white
+        );
+
+    box-shadow:
+        0 0 10px #38bdf8;
+
+    transition:
+        width 0.2s;
+}
+
+
+/* =====================================================
+   TITLE
+===================================================== */
+
+.title {
+
+    position: absolute;
+
+    left: 50%;
+    bottom: 30px;
+
+    transform:
+        translateX(-50%);
+
+    text-align: center;
+
+    z-index: 100;
+
+    pointer-events: none;
+}
+
+
+.title p {
+
+    color: #687380;
+
+    font-size: 8px;
+
+    letter-spacing: 6px;
+}
+
+
+.title h2 {
+
+    margin-top: 7px;
+
+    color: rgba(255,255,255,0.9);
+
+    font-size: 28px;
+
+    font-weight: 300;
+
+    letter-spacing: 7px;
+}
+
+
+.title h2 span {
+
+    font-weight: bold;
+
+    color: white;
+}
+
+
+/* =====================================================
+   FLYING
+===================================================== */
+
+.car-wrapper.flying {
+
+    top: 32%;
+}
+
+
+/* =====================================================
+   BOOST
+===================================================== */
+
+.car-wrapper.boost {
+
+    animation:
+        boostMovement 0.22s infinite alternate;
+}
+
+
+@keyframes boostMovement {
+
+    from {
+
+        transform:
+            translate(-50%, -50%)
+            translateX(-10px)
+            scale(1.02);
+    }
+
+    to {
+
+        transform:
+            translate(-50%, -50%)
+            translateX(10px)
+            scale(1.1);
+    }
+}
+
+
+/* BIG BOOST FLAMES */
+
+.car-wrapper.boost .thruster {
+
+    height: 190px;
+
+    width: 45px;
+
+    top: 235px;
+
+    filter:
+
+        blur(2px)
+
+        drop-shadow(
+            0 0 12px #38bdf8
+        )
+
+        drop-shadow(
+            0 0 30px #2563eb
+        );
+
+    animation:
+        boostFlame 0.08s infinite alternate;
+}
+
+
+@keyframes boostFlame {
+
+    from {
+
+        transform:
+            scaleY(0.45)
+            scaleX(0.7);
+
+        opacity: 0.65;
+    }
+
+    to {
+
+        transform:
+            scaleY(1.45)
+            scaleX(1.15);
+
+        opacity: 1;
+    }
+}
+
+
+/* BIG BOOST GLOW */
+
+.car-wrapper.boost .thruster-glow {
+
+    width: 100px;
+    height: 100px;
+
+    top: 250px;
+
+    background:
+        rgba(14,165,233,0.45);
+
+    filter:
+        blur(25px);
+
+    animation:
+        boostGlow 0.1s infinite alternate;
+}
+
+
+@keyframes boostGlow {
+
+    from {
+
+        transform:
+            scale(0.7);
+
+        opacity: 0.4;
+    }
+
+    to {
+
+        transform:
+            scale(1.7);
+
+        opacity: 1;
+    }
+}
+
+
+/* SPEED TRAILS */
+
+.car-wrapper.boost .speed-trail {
+
+    opacity: 1;
+
+    animation:
+        speedTrail 0.15s linear infinite;
+}
+
+
+.trail1 {
+    animation-delay: 0s;
+}
+
+.trail2 {
+    animation-delay: 0.05s;
+}
+
+.trail3 {
+    animation-delay: 0.1s;
+}
+
+
+@keyframes speedTrail {
+
+    from {
+
+        transform:
+            translateX(0)
+            scaleX(0.4);
+
+        opacity: 0.2;
+    }
+
+    to {
+
+        transform:
+            translateX(-120px)
+            scaleX(1.5);
+
+        opacity: 1;
+    }
+}
+
+
+/* =====================================================
+   BOOST BUTTON
+===================================================== */
+
+.car-wrapper.boost ~ .ui button:last-child {
+
+    background:
+        #0284c7;
+
+    border-color:
+        #38bdf8;
+
+    box-shadow:
+        0 0 20px
+        rgba(56,189,248,0.5);
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 800px) {
+
+    .car-wrapper {
+
+        transform:
+            translate(-50%, -50%)
+            scale(0.65);
+    }
+
+    .car-wrapper.flying {
+
+        transform:
+            translate(-50%, -50%)
+            scale(0.7);
+    }
+
+    .ui {
+
+        left: 15px;
+        top: 15px;
+    }
+
+    .speed-box {
+
+        right: 15px;
+        top: 15px;
+
+        width: 150px;
+    }
+
+    .title {
+
+        display: none;
+    }
+}
